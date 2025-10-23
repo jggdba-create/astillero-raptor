@@ -357,6 +357,19 @@ body {
     text-align: center;
 }
 
+/* Contenedor interno del texto */
+.text-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
 .brand-content::before {
     content: '';
     position: absolute;
@@ -921,6 +934,15 @@ body {
         text-align: center;
     }
     
+    .text-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    
     .brand-title {
         font-size: 1.8rem;
         padding: 0 0.5rem;
@@ -1009,6 +1031,16 @@ body {
         text-align: center;
     }
     
+    .text-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+    
     .brand-title {
         font-size: 1.5rem;
         padding: 0 0.25rem;
@@ -1054,6 +1086,16 @@ body {
         gap: 1rem;
     }
     
+    .text-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+    
     .brand-title {
         font-size: 1.3rem;
         padding: 0 0.1rem;
@@ -1076,6 +1118,16 @@ body {
 
 /* Móviles extra pequeños */
 @media (max-width: 320px) {
+    .text-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        text-align: center;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+    
     .brand-title {
         font-size: 1.2rem;
     }
