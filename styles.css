@@ -15,6 +15,9 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* ===== VARIABLES CSS ===== */
@@ -277,6 +280,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .section-title {
@@ -324,6 +329,7 @@ body {
     box-shadow: var(--shadow-soft);
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .brand-content::before {
@@ -363,6 +369,7 @@ body {
     line-height: 1.8;
     color: var(--text-muted);
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .brand-link {
@@ -426,6 +433,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .gallery-item {
@@ -435,6 +444,9 @@ body {
     cursor: pointer;
     transition: var(--transition);
     box-shadow: var(--shadow-soft);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .gallery-item:hover {
@@ -789,10 +801,15 @@ body {
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 2rem;
+        text-align: center;
     }
 
     .brand-content.reverse {
         direction: ltr;
+    }
+    
+    .brand-description {
+        text-align: center;
     }
 
     .contact-content {
@@ -815,10 +832,16 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .nav-container {
         padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .hero-title {
@@ -827,14 +850,29 @@ body {
 
     .brand-content {
         padding: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .contact-form {
         padding: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .gallery-grid {
         grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Prevenir desbordamiento horizontal */
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
 

@@ -91,12 +91,18 @@ function openModal(imageId) {
     
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
+    
+    // Agregar entrada al historial para el botón atrás
+    history.pushState({modal: true, imageId: imageId}, '', '#galeria');
 }
 
 function closeModal() {
     const modal = document.getElementById('imageModal');
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
+    
+    // Volver al estado anterior en el historial
+    history.back();
 }
 
 // Cerrar modal al hacer clic fuera de la imagen
@@ -109,6 +115,14 @@ document.getElementById('imageModal').addEventListener('click', function(e) {
 // Cerrar modal con tecla Escape
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Manejar el botón atrás del navegador
+window.addEventListener('popstate', function(e) {
+    const modal = document.getElementById('imageModal');
+    if (modal.style.display === 'block') {
         closeModal();
     }
 });
