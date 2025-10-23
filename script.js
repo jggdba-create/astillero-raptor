@@ -198,7 +198,7 @@ function showNotification(message, type = 'info') {
 
 // ===== ANIMACIONES AL HACER SCROLL =====
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.service-card, .gallery-item, .brand-content');
+    const elements = document.querySelectorAll('.gallery-item, .brand-content');
     
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
@@ -228,16 +228,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// ===== EFECTO DE HOVER EN TARJETAS DE SERVICIOS =====
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
 
 // ===== EFECTO DE HOVER EN ELEMENTOS DE GALERÍA =====
 document.querySelectorAll('.gallery-item').forEach(item => {
@@ -293,20 +283,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
             if (rect.top <= 100 && rect.bottom >= 100) {
-                if (section.id === 'servicios') {
-                    // Detectar si está viendo servicios de Astillero o Raptor
-                    const serviceCards = section.querySelectorAll('.service-card');
-                    serviceCards.forEach(card => {
-                        const rect = card.getBoundingClientRect();
-                        if (rect.top <= 200 && rect.bottom >= 200) {
-                            if (card.classList.contains('astillero')) {
-                                currentSection = 'astillero';
-                            } else if (card.classList.contains('raptor')) {
-                                currentSection = 'raptor';
-                            }
-                        }
-                    });
-                } else if (section.id === 'quienes-somos') {
+                if (section.id === 'quienes-somos') {
                     // Detectar si está viendo la sección de Astillero o Raptor
                     const brandContents = section.querySelectorAll('.brand-content');
                     brandContents.forEach(content => {
@@ -315,6 +292,19 @@ document.addEventListener('DOMContentLoaded', function() {
                             if (content.querySelector('.astillero')) {
                                 currentSection = 'astillero';
                             } else if (content.querySelector('.raptor')) {
+                                currentSection = 'raptor';
+                            }
+                        }
+                    });
+                } else if (section.id === 'galeria') {
+                    // Detectar si está viendo galería de Astillero o Raptor
+                    const gallerySections = section.querySelectorAll('.gallery-section');
+                    gallerySections.forEach(gallerySection => {
+                        const rect = gallerySection.getBoundingClientRect();
+                        if (rect.top <= 200 && rect.bottom >= 200) {
+                            if (gallerySection.querySelector('.astillero')) {
+                                currentSection = 'astillero';
+                            } else if (gallerySection.querySelector('.raptor')) {
                                 currentSection = 'raptor';
                             }
                         }

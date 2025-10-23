@@ -133,6 +133,24 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Ajustes específicos para móviles */
+@media (max-width: 768px) {
+    .hero-image {
+        background-attachment: scroll; /* Mejor rendimiento en móviles */
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        background-size: cover;
+        background-position: center center;
+        min-height: 100vh;
+    }
 }
 
 .hero-content {
@@ -410,88 +428,6 @@ body {
     color: white;
 }
 
-/* ===== SERVICIOS ===== */
-.services {
-    padding: 6rem 0;
-    background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--primary-dark) 100%);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--border-radius);
-    padding: 2.5rem;
-    text-align: center;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--metal-shine);
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.service-card.astillero:hover {
-    border-color: var(--accent-astillero);
-}
-
-.service-card.raptor:hover {
-    border-color: var(--accent-raptor);
-}
-
-.service-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    transition: var(--transition);
-}
-
-.service-card.astillero .service-icon {
-    background: linear-gradient(45deg, var(--accent-astillero), #4a90e2);
-    color: white;
-}
-
-.service-card.raptor .service-icon {
-    background: linear-gradient(45deg, var(--accent-raptor), #a0b86b);
-    color: white;
-}
-
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-}
-
-.service-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-.service-description {
-    color: var(--text-muted);
-    line-height: 1.6;
-}
 
 /* ===== CONTACTO ===== */
 .contact {
@@ -825,9 +761,6 @@ body {
         gap: 1rem;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
 
     .footer-content {
         grid-template-columns: 1fr;
