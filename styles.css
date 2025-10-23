@@ -116,6 +116,27 @@ body {
     overflow: hidden;
 }
 
+/* Solución para móviles con imagen cuadrada */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    
+    .hero-background {
+        grid-row: 1 / -1;
+        z-index: -1;
+    }
+    
+    .hero-content {
+        grid-row: 2;
+        z-index: 2;
+        padding: 2rem 1rem;
+    }
+}
+
 .hero-background {
     position: absolute;
     top: 0;
@@ -136,20 +157,37 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Ajustes específicos para móviles */
+/* Solución específica para móviles - imagen cuadrada */
 @media (max-width: 768px) {
     .hero-image {
-        background-attachment: scroll; /* Mejor rendimiento en móviles */
-        background-size: cover;
+        background-attachment: scroll;
+        /* Para imágenes cuadradas, usar contain para que se vea completa */
+        background-size: contain;
         background-position: center center;
+        background-repeat: no-repeat;
+        /* Fondo oscuro para espacios vacíos */
+        background-color: #1a1a1a;
     }
 }
 
+/* Para móviles pequeños, usar cover con mejor posicionamiento */
 @media (max-width: 480px) {
     .hero-image {
+        background-attachment: scroll;
         background-size: cover;
-        background-position: center center;
-        min-height: 100vh;
+        background-position: center 25%;
+        background-repeat: no-repeat;
+        background-color: #1a1a1a;
+    }
+}
+
+/* Para móviles muy pequeños */
+@media (max-width: 360px) {
+    .hero-image {
+        background-size: cover;
+        background-position: center 20%;
+        background-repeat: no-repeat;
+        background-color: #1a1a1a;
     }
 }
 
