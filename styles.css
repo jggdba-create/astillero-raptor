@@ -116,24 +116,11 @@ body {
     overflow: hidden;
 }
 
-/* Solución para móviles con imagen cuadrada */
+/* Optimización para móviles con imagen horizontal */
 @media (max-width: 768px) {
     .hero {
         min-height: 100vh;
-        height: auto;
-        display: grid;
-        grid-template-rows: 1fr auto;
-    }
-    
-    .hero-background {
-        grid-row: 1 / -1;
-        z-index: -1;
-    }
-    
-    .hero-content {
-        grid-row: 2;
-        z-index: 2;
-        padding: 2rem 1rem;
+        height: 100vh;
     }
 }
 
@@ -157,27 +144,33 @@ body {
     background-repeat: no-repeat;
 }
 
-/* Solución específica para móviles - imagen cuadrada */
-@media (max-width: 768px) {
+/* Optimización para tablets */
+@media (max-width: 1024px) {
     .hero-image {
         background-attachment: scroll;
-        /* Para imágenes cuadradas, usar contain para que se vea completa */
-        background-size: contain;
+        background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        /* Fondo oscuro para espacios vacíos */
-        background-color: #1a1a1a;
     }
 }
 
-/* Para móviles pequeños, usar cover con mejor posicionamiento */
+/* Optimización para móviles - imagen horizontal 1920x1080 */
+@media (max-width: 768px) {
+    .hero-image {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Para móviles pequeños */
 @media (max-width: 480px) {
     .hero-image {
         background-attachment: scroll;
         background-size: cover;
-        background-position: center 25%;
+        background-position: center center;
         background-repeat: no-repeat;
-        background-color: #1a1a1a;
     }
 }
 
@@ -185,9 +178,22 @@ body {
 @media (max-width: 360px) {
     .hero-image {
         background-size: cover;
-        background-position: center 20%;
+        background-position: center center;
         background-repeat: no-repeat;
-        background-color: #1a1a1a;
+    }
+}
+
+/* Optimización para orientación landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-image {
+        background-position: center 30%;
+    }
+}
+
+/* Optimización para orientación portrait en móviles */
+@media (max-width: 768px) and (orientation: portrait) {
+    .hero-image {
+        background-position: center center;
     }
 }
 
