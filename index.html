@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Astillero Sailors - Construcción y reparación de embarcaciones, mantenimiento náutico. Raptor Overland Arg - Travesías 4x4, equipamiento Overland, rutas y camps.">
+    <meta name="keywords" content="astillero, veleros, navegación, overland, 4x4, aventuras, mantenimiento náutico">
+    <title>Astillero Sailors &amp; Raptor Overland</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Astillero & Raptor Overland</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#quienes-somos" class="nav-link">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#galeria" class="nav-link">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <!-- Reemplazar por URL de imagen de Instagram de Astillero Sailors -->
+            <div class="hero-image"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title"></h1>
+                <p class="hero-subtitle"></p>
+                <a href="#quienes-somos" class=""></a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos Section -->
+    <section id="quienes-somos" class="about">
+        <div class="container">
+            <h2 class="section-title">Quiénes Somos</h2>
+            
+            <!-- Astillero Sailors -->
+            <div class="about-brand">
+                <div class="brand-content">
+                    <div class="brand-text">
+                        <h3 class="brand-title astillero">@astillerosailors</h3>
+                        <p class="brand-description">
+                            Astillero Sailors es una empresa dedicada a la fabricación de embarcaciones en P.R.F.V. con calidad de Exportación.
+                        </p>
+                        <a href="https://instagram.com/astillerosailors" target="_blank" class="brand-link">
+                            <i class="fab fa-instagram"></i> Seguinos en Instagram
+                        </a>
+                    </div>
+                    <div class="brand-image">
+                        <img src="images/astillero-about.jpg" alt="Astillero Sailors - Construcción de embarcaciones" class="brand-img">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Raptor Overland Arg -->
+            <div class="about-brand">
+                <div class="brand-content reverse">
+                    <div class="brand-text">
+                        <h3 class="brand-title raptor">@raptor.overland.arg</h3>
+                        <p class="brand-description">
+                            RAPTOR Overland de Astillero Sailors: Diseñada para tus aventuras todo terreno con nuestra calidad y resistencia. ¡Explora!
+                        </p>
+                        <a href="https://instagram.com/raptor.overland.arg" target="_blank" class="brand-link">
+                            <i class="fab fa-instagram"></i> Seguinos en Instagram
+                        </a>
+                    </div>
+                    <div class="brand-image">
+                        <img src="images/raptor-about.jpg" alt="Raptor Overland Arg - Aventuras 4x4" class="brand-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Section -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galería</h2>
+            
+            <!-- Astillero Sailors Gallery -->
+            <div class="gallery-section">
+                <h3 class="gallery-subtitle astillero">Astillero Sailors</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openModal('img1')">
+                        <img src="images/astillero-gallery-1.jpg" alt="Astillero Sailors - Construcción de embarcaciones" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('img2')">
+                        <img src="images/astillero-gallery-2.jpg" alt="Astillero Sailors - Mantenimiento náutico" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('img3')">
+                        <img src="images/astillero-gallery-3.jpg" alt="Astillero Sailors - Servicios de motores" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('img4')">
+                        <img src="images/astillero-gallery-4.jpg" alt="Astillero Sailors - Reparaciones especializadas" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Raptor Overland Gallery -->
+            <div class="gallery-section">
+                <h3 class="gallery-subtitle raptor">Raptor Overland Arg</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openModal('img5')">
+                        <img src="images/raptor-gallery-1.jpg" alt="Raptor Overland Arg - Travesías 4x4" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('img6')">
+                        <img src="images/raptor-gallery-2.jpg" alt="Raptor Overland Arg - Equipamiento outdoor" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('img7')">
+                        <img src="images/raptor-gallery-3.jpg" alt="Raptor Overland Arg - Rutas de camping" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('img8')">
+                        <img src="images/raptor-gallery-4.jpg" alt="Raptor Overland Arg - Aventuras extremas" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Servicios y Actividades</h2>
+            
+            <div class="services-grid">
+                <!-- Astillero Sailors Services -->
+                <div class="service-card astillero">
+                    <div class="service-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3 class="service-title">Construcción de Veleros</h3>
+                    <p class="service-description">
+                        Construcción personalizada de veleros de alta calidad con los mejores materiales y técnicas profesionales.
+                    </p>
+                </div>
+
+                <div class="service-card astillero">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title">Reparación y Mantenimiento</h3>
+                    <p class="service-description">
+                        Servicios completos de reparación y mantenimiento náutico para mantener tu embarcación en perfecto estado.
+                    </p>
+                </div>
+
+                <div class="service-card astillero">
+                    <div class="service-icon">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                    <h3 class="service-title">Charters Náuticos</h3>
+                    <p class="service-description">
+                        Experiencias únicas de navegación con nuestros servicios de charter profesional.
+                    </p>
+                </div>
+
+                <!-- Raptor Overland Services -->
+                <div class="service-card raptor">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="service-title">Travesías 4x4</h3>
+                    <p class="service-description">
+                        Aventuras off-road por los paisajes más espectaculares de Argentina con guías expertos.
+                    </p>
+                </div>
+
+                <div class="service-card raptor">
+                    <div class="service-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h3 class="service-title">Equipamiento Overland</h3>
+                    <p class="service-description">
+                        Todo el equipamiento necesario para tus aventuras outdoor de la más alta calidad.
+                    </p>
+                </div>
+
+                <div class="service-card raptor">
+                    <div class="service-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="service-title">Rutas y Camps</h3>
+                    <p class="service-description">
+                        Planificación de rutas personalizadas y ubicaciones de camping exclusivas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¡Trabajemos juntos!</h3>
+                    <p>Contáctanos para más información sobre nuestros servicios y aventuras.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://instagram.com/astillerosailors" target="_blank" class="social-link astillero">
+                            <i class="fab fa-instagram"></i>
+                            <span>@astillerosailors</span>
+                        </a>
+                        <a href="https://instagram.com/raptor.overland.arg" target="_blank" class="social-link raptor">
+                            <i class="fab fa-instagram"></i>
+                            <span>@raptor.overland.arg</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Seleccionar servicio</option>
+                            <option value="astillero">Astillero Sailors</option>
+                            <option value="raptor">Raptor Overland Arg</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Astillero Sailors & Raptor Overland Arg</h4>
+                    <p>Especialistas en navegación y aventuras outdoor</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/astillerosailors" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://instagram.com/raptor.overland.arg" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Astillero Sailors & Raptor Overland Arg. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para galería -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5493401642039?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20productos" 
+           target="_blank" 
+           class="whatsapp-btn" 
+           title="Contactanos por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

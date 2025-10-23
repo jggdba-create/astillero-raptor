@@ -1,0 +1,26 @@
+ Resumen de Especificaciones
+Tipo de Imagen	Dimensiones	Proporción	Peso Máximo	Formato
+Hero Background	1920x1080px	16:9	2MB	JPG
+About Images	600x400px	3:2	1MB	JPG
+Gallery Images	500x400px	5:4	1MB	JPG
+🎯 Recomendaciones Técnicas
+Para la Imagen Hero:
+Resolución mínima: 1920x1080px
+Resolución recomendada: 2560x1440px (2K)
+Orientación: Horizontal (landscape)
+Enfoque: Imagen impactante que represente Astillero Sailors
+Para Imágenes About:
+Resolución: 600x400px
+Orientación: Horizontal
+Enfoque: Imágenes que muestren el trabajo de cada marca
+Para Galería:
+Resolución: 500x400px
+Orientación: Horizontal (preferible)
+Enfoque: Variedad de trabajos, proyectos, aventuras
+🔧 Optimización
+Compresión: 85-90% de calidad JPG
+Peso total: Máximo 15MB para todas las imágenes
+Herramientas recomendadas:
+TinyPNG para comprimir
+Canva para redimensionar
+Photoshop para edición profesional
