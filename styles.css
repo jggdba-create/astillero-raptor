@@ -3,6 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 html {
@@ -311,10 +318,13 @@ body {
 .about {
     padding: 6rem 0;
     background: linear-gradient(135deg, var(--secondary-dark) 0%, var(--primary-dark) 100%);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .about-brand {
     margin-bottom: 4rem;
+    width: 100%;
 }
 
 .brand-content {
@@ -330,6 +340,9 @@ body {
     position: relative;
     overflow: hidden;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .brand-content::before {
@@ -354,6 +367,10 @@ body {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .brand-title.astillero {
@@ -370,6 +387,10 @@ body {
     color: var(--text-muted);
     margin-bottom: 2rem;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .brand-link {
@@ -391,6 +412,9 @@ body {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .brand-img {
@@ -399,6 +423,8 @@ body {
     object-fit: cover;
     border-radius: var(--border-radius);
     transition: var(--transition);
+    max-width: 100%;
+    display: block;
 }
 
 .brand-img:hover {
@@ -409,16 +435,22 @@ body {
 .gallery {
     padding: 6rem 0;
     background: var(--primary-dark);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .gallery-section {
     margin-bottom: 4rem;
+    width: 100%;
 }
 
 .gallery-subtitle {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .gallery-subtitle.astillero {
@@ -434,7 +466,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .gallery-item {
@@ -459,6 +493,8 @@ body {
     height: 250px;
     object-fit: cover;
     transition: var(--transition);
+    max-width: 100%;
+    display: block;
 }
 
 .gallery-overlay {
@@ -802,6 +838,10 @@ body {
         gap: 2rem;
         padding: 2rem;
         text-align: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .brand-content.reverse {
@@ -810,6 +850,24 @@ body {
     
     .brand-description {
         text-align: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
+    }
+    
+    .brand-title {
+        font-size: 2rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
+    }
+    
+    .brand-image {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .contact-content {
@@ -820,6 +878,22 @@ body {
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .gallery-item {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
 
@@ -873,6 +947,45 @@ body {
     * {
         max-width: 100%;
         box-sizing: border-box;
+    }
+    
+    /* Forzar centrado en móviles muy pequeños */
+    .brand-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .brand-text {
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .brand-title {
+        text-align: center !important;
+        font-size: 1.8rem !important;
+        word-break: break-word !important;
+    }
+    
+    .brand-description {
+        text-align: center !important;
+        font-size: 1rem !important;
+        word-break: break-word !important;
+    }
+    
+    .gallery-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    
+    .gallery-item {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 

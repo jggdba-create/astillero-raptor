@@ -74,14 +74,14 @@ function openModal(imageId) {
     
     // Caption basado en el ID de la imagen
     const captions = {
-        'img1': 'Astillero Sailors - Construcción de embarcaciones',
-        'img2': 'Astillero Sailors - Mantenimiento náutico',
-        'img3': 'Astillero Sailors - Servicios de motores',
-        'img4': 'Astillero Sailors - Reparaciones especializadas',
-        'img5': 'Raptor Overland Arg - Travesías 4x4',
-        'img6': 'Raptor Overland Arg - Equipamiento outdoor',
-        'img7': 'Raptor Overland Arg - Rutas de camping',
-        'img8': 'Raptor Overland Arg - Aventuras extremas'
+        'img1': 'Astillero Sailors - Cardumen 520 Open',
+        'img2': 'Astillero Sailors - Cardumen 520 Consola Central',
+        'img3': 'Astillero Sailors - Cardumen 520 Consola Lateral',
+        'img4': 'Astillero Sailors - Drift Boat Sailors',
+        'img5': 'Raptor Overland - Diseño',
+        'img6': 'Raptor Overland - Estilo',
+        'img7': 'Raptor Overland - Innovacion',
+        'img8': 'Raptor Overland - Aventuras Extremas'
     };
     
     // Configurar la imagen del modal
