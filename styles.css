@@ -1106,14 +1106,20 @@ body {
     .social-link {
         max-width: 100%;
         padding: 1rem;
+        min-width: 200px;
+        flex-wrap: nowrap;
     }
     
     .social-link i {
         font-size: 1.3rem;
+        flex-shrink: 0;
     }
     
     .social-link span {
         font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: unset;
     }
 
     .gallery-grid {
@@ -1238,6 +1244,24 @@ body {
         max-width: 100%;
         box-sizing: border-box;
     }
+    
+    .social-link {
+        min-width: 180px;
+        padding: 0.8rem;
+        flex-wrap: nowrap;
+    }
+    
+    .social-link i {
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+    
+    .social-link span {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: unset;
+    }
 
     .gallery-grid {
         grid-template-columns: 1fr;
@@ -1296,6 +1320,25 @@ body {
     
     .social-link i {
         font-size: 0.8rem;
+    }
+    
+    /* Estilos específicos para enlaces sociales en contacto */
+    .contact .social-link {
+        min-width: 160px;
+        padding: 0.7rem;
+        flex-wrap: nowrap;
+    }
+    
+    .contact .social-link i {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+    
+    .contact .social-link span {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: visible;
+        text-overflow: unset;
     }
     
     .brand-title {
