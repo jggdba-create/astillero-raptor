@@ -1103,19 +1103,20 @@ body {
         gap: 2rem;
     }
     
-    .social-link {
+    /* Solo para enlaces sociales en la sección de contacto */
+    .contact .social-link {
         max-width: 100%;
         padding: 1rem;
         min-width: 200px;
         flex-wrap: nowrap;
     }
     
-    .social-link i {
+    .contact .social-link i {
         font-size: 1.3rem;
         flex-shrink: 0;
     }
     
-    .social-link span {
+    .contact .social-link span {
         font-size: 0.9rem;
         white-space: nowrap;
         overflow: visible;
@@ -1245,18 +1246,19 @@ body {
         box-sizing: border-box;
     }
     
-    .social-link {
+    /* Solo para enlaces sociales en la sección de contacto */
+    .contact .social-link {
         min-width: 180px;
         padding: 0.8rem;
         flex-wrap: nowrap;
     }
     
-    .social-link i {
+    .contact .social-link i {
         font-size: 1.2rem;
         flex-shrink: 0;
     }
     
-    .social-link span {
+    .contact .social-link span {
         font-size: 0.85rem;
         white-space: nowrap;
         overflow: visible;
