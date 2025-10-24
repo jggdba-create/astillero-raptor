@@ -672,6 +672,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
 }
 
 .social-link {
@@ -686,9 +687,9 @@ body {
     text-decoration: none;
     color: var(--text-light);
     transition: var(--transition);
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
+    width: auto;
+    max-width: 100%;
+    margin: 0;
 }
 
 .social-link:hover {
@@ -1107,8 +1108,10 @@ body {
     .contact .social-link {
         max-width: 100%;
         padding: 1rem;
-        min-width: 200px;
+        min-width: auto;
+        width: auto;
         flex-wrap: nowrap;
+        display: inline-flex;
     }
     
     .contact .social-link i {
@@ -1248,9 +1251,11 @@ body {
     
     /* Solo para enlaces sociales en la sección de contacto */
     .contact .social-link {
-        min-width: 180px;
+        min-width: auto;
+        width: auto;
         padding: 0.8rem;
         flex-wrap: nowrap;
+        display: inline-flex;
     }
     
     .contact .social-link i {
@@ -1326,9 +1331,11 @@ body {
     
     /* Estilos específicos para enlaces sociales en contacto */
     .contact .social-link {
-        min-width: 160px;
+        min-width: auto;
+        width: auto;
         padding: 0.7rem;
         flex-wrap: nowrap;
+        display: inline-flex;
     }
     
     .contact .social-link i {
